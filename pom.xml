@@ -2,30 +2,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.esotericsoftware</groupId>
-	<version>1.1-SNAPSHOT</version>
-	<artifactId>kryo</artifactId>
 	<packaging>jar</packaging>
-	<name>kryo</name>
+	<groupId>com.esotericsoftware</groupId>
+	<artifactId>kryo</artifactId>
+	<version>1.04</version>
+
+  <repositories>
+    <repository>
+      <id>wordrak</id>
+      <url>http://wordrak.github.com/repo</url>
+    </repository>
+  </repositories>
 
 	<dependencies>
 		<dependency>
 			<groupId>asm</groupId>
 			<artifactId>asm</artifactId>
-			<version>3.2</version>
-			<scope>runtime</scope>
+			<version>3.3.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.esotericsoftware</groupId>
 			<artifactId>reflectasm</artifactId>
-			<version>0.8</version>
-			<scope>compile</scope>
+			<version>1.01</version>
 		 </dependency>
 		<dependency>
 			<groupId>com.esotericsoftware</groupId>
-			<artifactId>minlog</artifactId>
+			<artifactId>minilog</artifactId>
 			<version>1.2</version>
-			<scope>compile</scope>
 		 </dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -36,16 +39,14 @@
 	</dependencies>
 
 	<build>
-		<sourceDirectory>src</sourceDirectory>
-		<testSourceDirectory>test</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<inherited>true</inherited>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.6</source>
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 		</plugins>
